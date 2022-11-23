@@ -15,10 +15,12 @@ A sender (S) wants to send messages to a receiver (R). Keeping the message secre
 
 
 ### Gift Boxes :
-Lets assume a scenario where a shop x has recieved an order to pack items such that they sum to a given amount x. The Subset Sum Algorithm is required when this has to be done on a larger scale and items having different prices are to be sacked together. The basic idea is that we are given a total amount to be paid irrespective of the items in the gift box ensuring the cost sums up to the given amount.
+Lets assume a scenario where a shop A has recieved an order to pack items such that they sum to a given amount x. The Subset Sum Algorithm is required when this has to be done on a larger scale and items having different prices are to be sacked together. The basic idea is that we are given a total amount to be paid irrespective of the items in the gift box ensuring the cost sums up to the given amount.
 
-cost = {20,30,50,100,300,250,120,180,90,200};
-The required total amount is 500 ruppes.
+cost of items - 20,30,50,100,300,250,120,180,90,200 (in rupees) <br>
+The required total amount is 500 ruppes i.e. x=500.
 
+#### Input - <br>
+cost = {20,30,50,100,300,250,120,180,90,200}
 #### Output Screenshots
 ![alt text](https://github.com/GujarPrathamesh16/DAA-Assignment-II-Subset-Sum-/blob/main/Screenshot%20(17).png)
