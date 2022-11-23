@@ -12,3 +12,12 @@ The solution to this problem follows backtracking approach and builds the soluti
 ### TEST CASES - 
 #### Message Verification :
 A sender (S) wants to send messages to a receiver (R). Keeping the message secret is not important. However, R wants to be sure that the message he is receiving is not from an imposter and has not been tampered with. $S$ and $R$ agree on a set of $a_i$ (say 500) and a set of totals $T_j$ (say 200). These numbers may be publicly known, but only $S$ knows which subsets of the $a_i$ correspond to which $T_j$. The message sent by $S$ is a subset of size 100 of $\{1,\dots,200\}$. He does this by sending 100 subsets of the $a_i$ corresponding to the message he wants to send.
+
+
+#### Gift Boxes :
+Lets assume a scenario where a shop x has recieved an order to pack items such that they sum to a given amount x. The Subset Sum Algorithm is required when this has to be done on a larger scale and items having different prices are to be sacked together. The basic idea is that we are given a total amount to be paid irrespective of the items in the gift box ensuring the cost sums up to the given amount.
+
+cost = {20,30,50,100,300,250,120,180,90,200};
+The required total amount is 500 ruppes.
+
+OUTPUT SS-
