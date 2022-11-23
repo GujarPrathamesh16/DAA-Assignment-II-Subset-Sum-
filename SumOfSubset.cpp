@@ -1,39 +1,41 @@
-
-#include<iostream>
+#include <iostream>
 #include<bits/stdc++.h>
-#include<vector>
 using namespace std;
-vector<int> ans;
-int SumOfSubset(vector<int> v, int n, int sum){
-    if (sum == 0){
-        return 1; 
-    }
-    if (n == 0){
-         return 0;
-    }
-    if (v[n - 1] > sum){ 
-        return SumOfSubset(v, n - 1, sum);
-    }
-    else{
-         return SumOfSubset(v, n - 1, sum) || SumOfSubset(v, n - 1, sum - v[n - 1]);
-    }
+
+bool SubsetSum(vector <int> a, int n, int sum){
+	bool helper[n + 1][sum + 1];
+
+	for (int i = 1; i <= sum; i++){
+		helper[0][i] = false;
+	}
+
+	for (int i = 0; i <= n; i++){
+		helper[i][0] = true;
+	}
+
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= sum; j++) {
+			if (j < a[i - 1]){
+				helper[i][j] = helper[i - 1][j];
+			}
+			if (j >= a[i - 1]){
+				helper[i][j] = helper[i - 1][j]|| helper[i - 1][j -a[i - 1]];
+			}
+		}
+	}
+	return helper[n][sum];
 }
 
 int main(){
-    vector<int> v = {3,4,16,34,6,7,25,15,10};
-    int num;
-    cout<<"Enter the sum to be found."<<endl;
-    cin>>num;
-    int flag = SumOfSubset(v,v.size(),num);
-    if(flag==0){
-        cout<<"No subset having sum "<<num<<"is available."<<endl;
-    }
-    else{
-        cout<<"Subset Found with sum = "<<num<<endl;
-        for(int i=0;i<ans.size();i++){
-            cout<<ans[i]<<"\t";
-        }
-        cout<<endl;
-    }
-    return 0;
+	int reqsum;
+	cout<<"Enter a sum to be found."<<endl;
+	cin>>reqsum;
+	vector<int> a = {1,2,3,5,4,9,11,23};
+	if (SubsetSum(a, a.size(), reqsum) == true){
+		cout <<"Subset with sum equal to "<<reqsum<<" found.";
+	}
+	else{
+		cout <<"Unable to find a subset with sum equal to "<<reqsum;
+	}
+	return 0;
 }
