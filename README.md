@@ -21,4 +21,4 @@ cost = {20,30,50,100,300,250,120,180,90,200};
 The required total amount is 500 ruppes.
 
 #### Output Screenshots
-![alt text](https://github.com/GujarPrathamesh16/DAA-Assignment-II-Subset-Sum-/blob/main/Screenshot%20(18).png)
+![alt text](https://github.com/GujarPrathamesh16/DAA-Assignment-II-Subset-Sum-/blob/main/Screenshot%20(17).png)
