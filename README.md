@@ -9,6 +9,8 @@ Sum of Subset problem using Dynamic Programming approach.
 The solution to this problem follows backtracking approach and builds the solution in chunks or steps, that is at every step the algorithm checks the condition and if the condition satisfies it further moves adding the state to the solution, however if the condition is not satisfied then the algorithm is returns to the previous state and again checks the constraints/condition on another set of values and follows the same procedure to build an effective solution.
 Solution to this problem using Dynamic Programming provides the solution in polynomial time complexity.
 
+## EXPECTED SUCCESSFUL OUTPUT -
+![alt text](https://github.com/GujarPrathamesh16/DAA-Assignment-II-Subset-Sum-/blob/main/Screenshot%20(18).png).
 
 ## TEST CASES - 
 
