@@ -11,7 +11,13 @@ The solution to this problem follows backtracking approach and builds the soluti
 
 ## TEST CASES - 
 ### Message Verification :
-A sender (S) wants to send messages to a receiver (R). Keeping the message secret is not important. However, R wants to be sure that the message he is receiving is not from an imposter and has not been tampered with. $S$ and $R$ agree on a set of $a_i$ (say 500) and a set of totals $T_j$ (say 200). These numbers may be publicly known, but only $S$ knows which subsets of the $a_i$ correspond to which $T_j$. The message sent by $S$ is a subset of size 100 of $\{1,\dots,200\}$. He does this by sending 100 subsets of the $a_i$ corresponding to the message he wants to send.
+A sender A wants to send messages to a receiver B. Keeping the message secret is not important. However, B wants to be sure that the message he is receiving is not from an imposter and has not been tampered with. $A$ and $B$ agree on a set of $a_i$ (say 500) and a set of totals $T_j$ (say 200). These numbers may be known publicly, but only A knows which set of values present in set of totals can be obtained from the array a as sum and which one of them are to be ignored. The message sent by $A$ is a subset of size 100 of $\{1,\dots,200\}$. He does this by sending 100 subsets of the $a_i$ corresponding to the message he wants to send.
+<br>
+Consider the following encryption, that integers which could be obtained as a sum are prime numbers such that (number%3 == 2) i.e. The only [5,11,17,....83] can be obtained by adding certain set of values from A.<br>
+Hence the reciever only checks for these integers to obtain as sum, and can easily verify if the message is being tampered in between.
+#### Input - <br>
+A = {2,3,4,6,1,9,8,17,20,33,45,54}; <br>
+B = {1,4,5,11,15,17,22,23,45,61,79,83,86,101};
 
 
 ### Gift Boxes :
